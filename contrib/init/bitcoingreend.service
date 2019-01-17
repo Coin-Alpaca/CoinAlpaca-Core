@@ -1,0 +1,26 @@
+[Unit]
+Description=CoinAlpaca's distributed currency daemon
+After=network.target
+
+[Service]
+User=CoinAlpaca
+Group=CoinAlpaca
+
+Type=forking
+PIDFile=/var/lib/CoinAlpacad/CoinAlpacad.pid
+
+ExecStart=/usr/bin/CoinAlpacad -daemon -pid=/var/lib/CoinAlpacad/CoinAlpacad.pid \
+          -conf=/etc/CoinAlpaca/CoinAlpaca.conf -datadir=/var/lib/CoinAlpacad
+
+ExecStop=-/usr/bin/CoinAlpaca-cli -conf=/etc/CoinAlpaca/CoinAlpaca.conf \
+         -datadir=/var/lib/CoinAlpacad stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

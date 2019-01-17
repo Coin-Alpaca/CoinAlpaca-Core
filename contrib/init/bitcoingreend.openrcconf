@@ -1,0 +1,26 @@
+# /etc/conf.d/CoinAlpacad: config file for /etc/init.d/CoinAlpacad
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/CoinAlpaca/CoinAlpaca.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/CoinAlpacad"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/CoinAlpacad.pid"
+
+# Where to write CoinAlpacad data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/CoinAlpacad"
+
+# User and group to own CoinAlpacad process
+#BITCOIND_USER="CoinAlpaca"
+#BITCOIND_GROUP="CoinAlpaca"
+
+# Path to CoinAlpacad executable
+#BITCOIND_BIN="/usr/bin/CoinAlpacad"
+
+# Nice value to run CoinAlpacad under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

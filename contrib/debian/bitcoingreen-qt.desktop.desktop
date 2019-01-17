@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=CoinAlpaca
+Comment=CoinAlpaca P2P Cryptocurrency
+Exec=CoinAlpaca-qt %u
+Terminal=false
+Type=Application
+Icon=CoinAlpaca128
+MimeType=x-scheme-handler/CoinAlpaca;
+Categories=Office;Finance;
+Name[en_US]=CoinAlpaca-qt.desktop
